@@ -20,8 +20,6 @@ namespace VB
         private void FollowMouse()
         {
             Vector3 mousePosition = Input.mousePosition;
-            // TODO: Move to CameraHandler.cs
-            //if (camera == null) { camera = new Camera(); }
             mousePosition = camera.ScreenToWorldPoint(mousePosition);
 
             Vector2 direction = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
