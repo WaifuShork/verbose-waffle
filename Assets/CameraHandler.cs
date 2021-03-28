@@ -12,7 +12,7 @@ namespace VB
 
         private void Awake()
         {
-            camera = camera == null ? new Camera() : GetComponent<Camera>();
+            camera = camera == null ? gameObject.AddComponent<Camera>() : GetComponent<Camera>();
             target = FindObjectOfType<PlayerMovement>().transform;
         }
 
